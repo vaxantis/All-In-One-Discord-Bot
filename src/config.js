@@ -1,7 +1,7 @@
 module.exports = {
     client: {
-        token: "MTIzNzEwOTE1OTI3MTMzMzkwOQ.Gl0u7P.MTqKssIHIlPxmqNS3eQZxf0k1BtSxv6t-zijOE",
-        id: "1237109159271333909"
+        token: "MTMzNDExMTM2NTMxMjI4Njc1MQ.GhLaZH.t9R02gJwhnFO2981d2Yg0LI6wxhaZ10PEiB5OU",
+        id: "1334111365312286751"
     },
     handler: {
         prefix: "?",
@@ -18,11 +18,11 @@ module.exports = {
         },
     },
     users: {
-        developers: ["1038240696223666257"],
+        developers: ["1250664820488011811"],
     },
     development: { 
         enabled: false,
-        guild: "1234404251271430176",
+        guild: "1338281118885220415",
     }, 
     messageSettings: {
         developerMessage: "You are not authorized to use this command, contact staff for more information!",
