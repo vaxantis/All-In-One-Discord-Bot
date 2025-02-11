@@ -6,7 +6,7 @@ const wait = require('node:timers/promises').setTimeout;
 
 module.exports = {
     structure: new SlashCommandBuilder()
-        .setName('help')
+        .setName('get-started')
         .setDescription('View all the possible commands!'),
     options: {
         cooldown: 15000
