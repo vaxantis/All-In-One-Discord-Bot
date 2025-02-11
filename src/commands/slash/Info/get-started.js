@@ -19,45 +19,30 @@ module.exports = {
 
         await interaction.deferReply();
 
-        let prefix = config.handler.prefix;
-
-        if (config.handler?.mongodb?.enabled) {
-            try {
-                const data = (await GuildSchema.findOne({ guild: message.guildId }));
-
-                if (data && data?.prefix) prefix = data.prefix;
-            } catch {
-                prefix = config.handler.prefix;
-            };
-        };
-
         const mapIntCmds = client.applicationcommandsArray.map((v) => `\`${(v.type === 2 || v.type === 3) ? '' : '/'}${v.name}\`: ${v.description || '(No description)'}`);
-        const mapPreCmds = client.collection.prefixcommands.map((v) => `\`${prefix}${v.structure.name}\` (${v.structure.aliases.length > 0 ? v.structure.aliases.map((a) => `**${a}**`).join(', ') : 'None'}): ${v.structure.description || '(No description)'}`);
         
-        const invite = new ButtonBuilder()
-        .setLabel('Invite bot!')
-        .setStyle(ButtonStyle.Link)
-        .setURL('https://discord.com/oauth2/authorize?client_id=1217220951171928214&permissions=19269862042870&response_type=code&redirect_uri=https%3A%2F%2Fdiscord.gg%2FwwehxqRKe4&scope=guilds.join+bot')
-        .setEmoji('🔗')
+      const cmds = new ButtonBuilder()
+        .setLabel('Commands')
+        .setStyle(ButtonStyle.Secondary)
+        .setCustomId('cmds')
         
         const row = new ActionRowBuilder()
-        .addComponents(invite);
+        .addComponents(cmds);
 
        const help = new EmbedBuilder()
-                    .setTitle('Help command')
-                    .setDescription("For more support, please join our Support Server [here](https://discord.gg/xbFdfNbKnC)")
-                    .addFields(
-                        { name: 'Slash commands', value: `${mapIntCmds.join('\n')}` },
-                        { name: 'Prefix commands', value: `${mapPreCmds.join('\n')}` }
-                    )
-       
-        const expired = new EmbedBuilder()
-       .setTitle("Expired!")
-       .setDescription("The help menu has expired because it has been used too long ago. Please use it again by executing the </help:1218973589491941429> command!")
-       .setColor("Red")
-        
+    .setTitle('Get Started with Nalo Tech')
+    .setDescription("Here’s how you can get started and make the most of our community:")
+    .setColor('#0099ff')
+    .addFields(
+        { name: '💡 Getting Started', value: 'Simply use the available commands in your server. For further assistance, refer to the Support Server.' },
+        { name: '🌐 Support Team', value: 'Need more help or want to report an issue? Create a ticket and our Support Team will help you out.' },
+        { name: '🔄 Updates', value: 'Stay updated with the latest features and improvements by checking announcements in the Support Server.' },
+        { name: '❓ FAQs', value: 'Common questions and answers can be found in the FAQ section of the Support Server.' },
+        { name: '📨 Feedback', value: 'We value your feedback! Share your suggestions or report bugs directly in the Support Server.' }
+    )
+    .setFooter({ text: 'Thank you for using our bot! Your support helps us grow.', iconURL: 'https://cdn.discordapp.com/attachments/1261044599372386395/1275204267594223717/image0.jpg?ex=66c5b2c5&is=66c46145&hm=54a66fa6466718b673934ddc78dc128f05a2f5cdf0de7d5e3425c4c9ad24ba05&' });
+
+
         await interaction.followUp({embeds: [help], components: [row]});
-        await wait(20_000)
-        await interaction.editReply({embeds: [expired], components: []})
     }
 };
