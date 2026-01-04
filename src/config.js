@@ -1,7 +1,7 @@
 module.exports = {
     client: {
-        token: "MTMzNDExMTM2NTMxMjI4Njc1MQ.GhLaZH.t9R02gJwhnFO2981d2Yg0LI6wxhaZ10PEiB5OU",
-        id: "1334111365312286751"
+        token: "",
+        id: ""
     },
     handler: {
         prefix: "?",
@@ -14,15 +14,15 @@ module.exports = {
         },
         mongodb: {
             enabled: false,
-            uri: "mongodb+srv://c4clan2:X7e$Hfh,Hpb)v5Q@c4clan2.msmud1g.mongodb.net/?retryWrites=true&w=majority"
+            uri: ""
         },
     },
     users: {
-        developers: ["1250664820488011811"],
+        developers: [""],
     },
     development: { 
         enabled: false,
-        guild: "1338281118885220415",
+        guild: "",
     }, 
     messageSettings: {
         developerMessage: "You are not authorized to use this command, contact staff for more information!",
