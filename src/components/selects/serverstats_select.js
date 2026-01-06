@@ -1,5 +1,5 @@
-const { EmbedBuilder } = require("discord.js");
-const ExtendedClient = require("../../class/ExtendedClient");
+const { StringSelectMenuInteraction, ModalSubmitInteraction, ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder, EmbedBuilder, getTextInputValue} = require('discord.js');
+const ExtendedClient = require('../../class/ExtendedClient');
 
 module.exports = {
   customId: "serverstats_select",
