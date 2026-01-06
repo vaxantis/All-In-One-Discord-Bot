@@ -20,7 +20,7 @@ Advanced all-in-one Discord bot with prefix & slash commands
 </strong></p>
 
 <p align="center">
-VAX Discord Bot is a fully-featured open-source bot, including moderation, fun, music, utility, and server management tools, all designed to be easy to set up and use.
+A fully-featured bot, including moderation, fun, music, utility, and server management tools, all designed to be easy to set up and use.
 </p>
 
 > [!CAUTION]
