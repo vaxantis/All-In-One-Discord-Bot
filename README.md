@@ -48,28 +48,13 @@ A fully-featured bot, including moderation, fun, music, utility, and server mana
 ### Moderation Tools
 - Complete moderation: ban, kick, mute, timeout, warn
 - Auto moderation: spam & profanity filtering
-- Ticket system: create, manage, and log tickets
 - Audit logging: track changes, member updates, message edits
 
-### Fun & Entertainment
-- Music system: play YouTube, Spotify, SoundCloud
-- Leveling & XP system with customizable rewards
-- Mini-games: rock-paper-scissors, coinflip, 8ball
-- Meme and joke commands
-
 ### Utility & Info
-- Server info, user info, role info
-- Profile system for users
-- Weather info & utility commands
-
-### Integration & API
-- Spotify API integration
-- Instagram post notifications
-- Valorant player & store info
-- Weather API support
+- Server info & user info
+- Utility commands
 
 ### Customization
-- Custom prefix support
 - Custom embeds & announcements
 - Thread management tools
 
