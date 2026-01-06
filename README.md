@@ -7,8 +7,6 @@
  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 -->
 
-<img align="center" alt="VAX Bot Banner" src="https://i.postimg.cc/v87R8PSx/test.png">
-
 <p align="center">
 <img align="center" alt="GitHub Issues" src="https://img.shields.io/github/issues/vaxantis/All-In-One-Discord-Bot?style=for-the-badge"> 
 <img align="center" alt="GitHub license" src="https://img.shields.io/github/license/vaxantis/All-In-One-Discord-Bot?style=for-the-badge">
