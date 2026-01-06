@@ -41,7 +41,6 @@ module.exports = {
       .setDescription("Select an option from the menu below to view detailed stats.")
       .setColor("#3498DB")
       .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
-      .setFooter({ text: "All-In-One Discord Bot | Server Stats" })
       .setTimestamp();
 
     await interaction.editReply({ embeds: [embed], components: [row] });
